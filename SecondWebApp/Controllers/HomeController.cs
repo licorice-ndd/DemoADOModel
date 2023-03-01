@@ -14,6 +14,7 @@ namespace SecondWebAppNet5.Controllers
         {
             return View(); // return view mặc định của action List()
         }
+        public IActionResult Delete() { return View("Views/Default.cshtml"); }
         public void Add() { }
         public string Show() { return "Action Show at controller"; }
     }

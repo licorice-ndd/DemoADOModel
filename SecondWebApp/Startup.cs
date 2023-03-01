@@ -40,6 +40,8 @@ namespace SecondWebApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action}"
+                    // nếu 0 có thông tin action như line 42 thì mặc định gọi vào index như này pattern: "{controller}/{action=Index}" 
+                    // nếu 0 có controller thì tự động gọi vào controller Home như này pattern: "{controller=Home}/{action}" (xóa từ dòng 34-37)
                     );
 
             });
