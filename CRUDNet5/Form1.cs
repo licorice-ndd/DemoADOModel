@@ -22,7 +22,29 @@ namespace CRUDNet5
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btbAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
         {
 
         }

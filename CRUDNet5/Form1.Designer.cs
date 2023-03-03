@@ -31,10 +31,10 @@
             dataGridView1 = new System.Windows.Forms.DataGridView();
             btnView = new System.Windows.Forms.Button();
             btbAdd = new System.Windows.Forms.Button();
-            btnDelete = new System.Windows.Forms.Button();
             btnEdit = new System.Windows.Forms.Button();
             textBox1 = new System.Windows.Forms.TextBox();
             btnSearch = new System.Windows.Forms.Button();
+            btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -55,6 +55,7 @@
             btnView.TabIndex = 1;
             btnView.Text = "View";
             btnView.UseVisualStyleBackColor = true;
+            btnView.Click += btnView_Click;
             // 
             // btbAdd
             // 
@@ -64,16 +65,7 @@
             btbAdd.TabIndex = 2;
             btbAdd.Text = "Add";
             btbAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Location = new System.Drawing.Point(920, 222);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new System.Drawing.Size(75, 23);
-            btnDelete.TabIndex = 3;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += button3_Click;
+            btbAdd.Click += btbAdd_Click;
             // 
             // btnEdit
             // 
@@ -83,6 +75,7 @@
             btnEdit.TabIndex = 4;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // textBox1
             // 
@@ -99,16 +92,27 @@
             btnSearch.TabIndex = 6;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new System.Drawing.Point(920, 222);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new System.Drawing.Size(75, 23);
+            btnDelete.TabIndex = 7;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1153, 493);
+            Controls.Add(btnDelete);
             Controls.Add(btnSearch);
             Controls.Add(textBox1);
             Controls.Add(btnEdit);
-            Controls.Add(btnDelete);
             Controls.Add(btbAdd);
             Controls.Add(btnView);
             Controls.Add(dataGridView1);
@@ -125,9 +129,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button btbAdd;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
