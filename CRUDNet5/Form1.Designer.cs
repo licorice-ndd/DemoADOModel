@@ -35,6 +35,7 @@
             textBox1 = new System.Windows.Forms.TextBox();
             btnSearch = new System.Windows.Forms.Button();
             btnDelete = new System.Windows.Forms.Button();
+            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -81,12 +82,12 @@
             // 
             textBox1.Location = new System.Drawing.Point(920, 25);
             textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(191, 23);
+            textBox1.Size = new System.Drawing.Size(200, 23);
             textBox1.TabIndex = 5;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new System.Drawing.Point(977, 83);
+            btnSearch.Location = new System.Drawing.Point(975, 124);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new System.Drawing.Size(75, 23);
             btnSearch.TabIndex = 6;
@@ -104,11 +105,19 @@
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new System.Drawing.Point(920, 69);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            dateTimePicker1.TabIndex = 8;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1153, 493);
+            Controls.Add(dateTimePicker1);
             Controls.Add(btnDelete);
             Controls.Add(btnSearch);
             Controls.Add(textBox1);
@@ -133,5 +142,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
