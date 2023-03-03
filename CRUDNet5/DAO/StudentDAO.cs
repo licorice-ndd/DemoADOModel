@@ -9,22 +9,22 @@ using System.Windows.Forms;
 
 namespace CRUDNet5.DAO
 {
-    class CategoryDAO
+    class StudentDAO
     {
-        private static CategoryDAO instance;
-        public static CategoryDAO Instance
+        private static StudentDAO instance;
+        public static StudentDAO Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new CategoryDAO();
+                    instance = new StudentDAO();
                 }
                 return instance;
             }
             //set { instance = value; }
         }
-        private CategoryDAO() { }
+        private StudentDAO() { }
         public DataTable View()
         {
             object[] parameter = new object[] {};
@@ -47,6 +47,10 @@ namespace CRUDNet5.DAO
                 return true;
             }
             return false;
+        }
+        public bool FixDataByFields(string id)
+        {
+
         }
 /*        INSERT INTO[dbo].[Student]
         ([id]

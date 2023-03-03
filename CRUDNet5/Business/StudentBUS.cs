@@ -8,34 +8,34 @@ using System.Windows.Forms;
 
 namespace CRUDNet5.Business
 {
-     class CategoryBUS
+     class StudentBUS
     {
-        private static CategoryBUS instance;
-        public static CategoryBUS Instance
+        private static StudentBUS instance;
+        public static StudentBUS Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new CategoryBUS();
+                    instance = new StudentBUS();
                 }
                 return instance;
             }
             //set { instance = value; }
         }
-        private CategoryBUS() { }
+        private StudentBUS() { }
         public void View(DataGridView data)
         {
-            data.DataSource = CategoryDAO.Instance.View();
+            data.DataSource = StudentDAO.Instance.View();
         }
         public void SearchByOrderDate(DataGridView data, DateTimePicker datetimepicker)
         {
-            data.DataSource = CategoryDAO.Instance.SearchByOrderDate(datetimepicker);
+            data.DataSource = StudentDAO.Instance.SearchByOrderDate(datetimepicker);
         }
         public bool DeleteBySelected(DataGridView dataGridView)
         {
             string id = dataGridView.SelectedCells[0].OwningRow.Cells["id"].Value.ToString();
-            return CategoryDAO.Instance.DeleteFields(id);
+            return StudentDAO.Instance.DeleteFields(id);
         }
     }
 }
