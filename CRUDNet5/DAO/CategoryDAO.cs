@@ -27,9 +27,35 @@ namespace CRUDNet5.DAO
         private CategoryDAO() { }
         public DataTable View()
         {
-            string sql = "Select * from Category";
+            object[] parameter = new object[] {};
+            string sql = "Select * from Student";
             //            string sql = "Select top 10 * from SubCategory";
-            return DataProvider.Instance.ExcuteQuery(sql);
+            return DataProvider.Instance.ExcuteQuery(sql,parameter);
         }
+        public DataTable SearchByOrderDate(DateTimePicker datetimepicker)
+        {
+            object[] parameter = new object[] { datetimepicker.Value };
+            string sql = "select * from Student where dateofbirth > @dateofbirth";
+            return DataProvider.Instance.ExcuteQuery(sql, parameter);
+        }
+        public bool DeleteFields(string id)
+        {
+            string sql = "Delete Student where id = @id";
+            object[] parameter = new object[] { id};
+            if (DataProvider.Instance.ExcuteNonQuery(sql,parameter)>0)
+            {
+                return true;
+            }
+            return false;
+        }
+/*        INSERT INTO[dbo].[Student]
+        ([id]
+      ,[name]
+      ,[address]
+      ,[gender]
+      ,[dateofbirth]
+      ,[country]
+      ,[role])
+VALUES(6, N'Mr F', N'105 PVD', N'Gay','2009-09-09', N'China', N'Goalkepper');*/
     }
 }

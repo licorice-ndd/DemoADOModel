@@ -28,5 +28,14 @@ namespace CRUDNet5.Business
         {
             data.DataSource = CategoryDAO.Instance.View();
         }
+        public void SearchByOrderDate(DataGridView data, DateTimePicker datetimepicker)
+        {
+            data.DataSource = CategoryDAO.Instance.SearchByOrderDate(datetimepicker);
+        }
+        public bool DeleteBySelected(DataGridView dataGridView)
+        {
+            string id = dataGridView.SelectedCells[0].OwningRow.Cells["id"].Value.ToString();
+            return CategoryDAO.Instance.DeleteFields(id);
+        }
     }
 }

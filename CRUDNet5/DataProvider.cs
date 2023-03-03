@@ -39,7 +39,7 @@ namespace CRUDNet5
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-
+                if(parameter != null) {
                 string[] temp = query.Split(' ');
                 List<string> listParameter = new List<string>();
                 foreach (string item in temp)
@@ -50,7 +50,7 @@ namespace CRUDNet5
                 {
                     command.Parameters.AddWithValue(listParameter[i], parameter[i]);
                 }
-
+                }
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
                 adapter.Fill(dt);
@@ -58,5 +58,35 @@ namespace CRUDNet5
             }
             return dt;
         }
+
+        public int ExcuteNonQuery(string query, object[] parameter = null) // thuc hien them xoa xua
+        {
+            int acceptedRows = 0;
+
+            using (SqlConnection connection = new SqlConnection(connectionString)) // tự hủy data, bộ nhớ khi dùng using
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+                if (parameter != null)
+                {
+                    string[] temp = query.Split(' ');
+                    List<string> listParameter = new List<string>();
+                    foreach (string item in temp)
+                    {
+                        if (item[0] == '@') listParameter.Add(item);
+                    }
+                    for (int i = 0; i < parameter.Length; i++)
+                    {
+                        command.Parameters.AddWithValue(listParameter[i], parameter[i]);
+                    }
+                }
+               acceptedRows =  command.ExecuteNonQuery(); // thực hiện câu query trả về số dòng mà câu truy vấn thực hiện đc
+                connection.Close();
+            }
+
+            return acceptedRows;
+        }
     }
 }
+ 

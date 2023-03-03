@@ -36,6 +36,7 @@
             btnSearch = new System.Windows.Forms.Button();
             btnDelete = new System.Windows.Forms.Button();
             dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             // btnView
             // 
-            btnView.Location = new System.Drawing.Point(920, 166);
+            btnView.Location = new System.Drawing.Point(920, 203);
             btnView.Name = "btnView";
             btnView.Size = new System.Drawing.Size(75, 23);
             btnView.TabIndex = 1;
@@ -60,7 +61,7 @@
             // 
             // btbAdd
             // 
-            btbAdd.Location = new System.Drawing.Point(1036, 166);
+            btbAdd.Location = new System.Drawing.Point(1045, 246);
             btbAdd.Name = "btbAdd";
             btbAdd.Size = new System.Drawing.Size(75, 23);
             btbAdd.TabIndex = 2;
@@ -70,7 +71,7 @@
             // 
             // btnEdit
             // 
-            btnEdit.Location = new System.Drawing.Point(1036, 222);
+            btnEdit.Location = new System.Drawing.Point(1045, 203);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new System.Drawing.Size(75, 23);
             btnEdit.TabIndex = 4;
@@ -87,7 +88,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new System.Drawing.Point(975, 124);
+            btnSearch.Location = new System.Drawing.Point(982, 174);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new System.Drawing.Size(75, 23);
             btnSearch.TabIndex = 6;
@@ -97,7 +98,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new System.Drawing.Point(920, 222);
+            btnDelete.Location = new System.Drawing.Point(920, 246);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new System.Drawing.Size(75, 23);
             btnDelete.TabIndex = 7;
@@ -112,11 +113,20 @@
             dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             dateTimePicker1.TabIndex = 8;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new System.Drawing.Point(920, 109);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new System.Drawing.Size(200, 23);
+            comboBox1.TabIndex = 9;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1153, 493);
+            Controls.Add(comboBox1);
             Controls.Add(dateTimePicker1);
             Controls.Add(btnDelete);
             Controls.Add(btnSearch);
@@ -143,5 +153,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

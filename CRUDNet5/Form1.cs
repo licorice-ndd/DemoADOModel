@@ -25,10 +25,10 @@ namespace CRUDNet5
 
         private void btnView_Click(object sender, EventArgs e)
         {
-/*            string sql = "Select * from Category";
-            //            string sql = "Select top 10 * from SubCategory";
-            object[] paramete = new object[] {};
-            dataGridView1.DataSource = DataProvider.Instance.ExcuteQuery(sql,paramete);*/
+            /*            string sql = "Select * from Category";
+                        //            string sql = "Select top 10 * from SubCategory";
+                        object[] paramete = new object[] {};
+                        dataGridView1.DataSource = DataProvider.Instance.ExcuteQuery(sql,paramete);*/
             CategoryBUS.Instance.View(dataGridView1);
         }
 
@@ -40,13 +40,18 @@ namespace CRUDNet5
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            //MessageBox.Show(DataProvider.Instance.ExcuteNonQuery("Delete Student where id = 5").ToString());
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string sql = "Delete Category where ID like " + textBox1.Text;
-            dataGridView1.DataSource = DataProvider.Instance.ExcuteQuery(sql);
+            //MessageBox.Show(DataProvider.Instance.ExcuteNonQuery("Delete Student where ID like " + textBox1.Text).ToString());
+            if (CategoryBUS.Instance.DeleteBySelected(dataGridView1))
+            {
+                MessageBox.Show("success");
+                btnView_Click(sender, e);
+            }
+            else MessageBox.Show("not success");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -55,10 +60,7 @@ namespace CRUDNet5
             // string sql = "Select * from SubCategory Where ID like @ID"; way 2 step 1
             // command.Parameters.AddWithValue("@ID", textBox1.Text); way 2 step 2 truyen tham so
 
-            string sql = "select * from Orders where OrderDate > @OrderDate";
-
-            object[] paramete = new object[] { dateTimePicker1.Value };
-            dataGridView1.DataSource = DataProvider.Instance.ExcuteQuery(sql,paramete);
+            CategoryBUS.Instance.SearchByOrderDate(dataGridView1, dateTimePicker1);
         }
     }
 }
