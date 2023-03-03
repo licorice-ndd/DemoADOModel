@@ -62,8 +62,10 @@ namespace CRUDNet5
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string sql = "Select * from SubCategory Where ID like 1";
+            string sql = "Select * from SubCategory Where ID like " + textBox1.Text; // 1 or ID like 2
+           // string sql = "Select * from SubCategory Where ID like @ID"; way 2 step 1
             SqlCommand command = new SqlCommand(sql, connection);
+           // command.Parameters.AddWithValue("@ID", textBox1.Text); way 2 step 2 truyen tham so
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
