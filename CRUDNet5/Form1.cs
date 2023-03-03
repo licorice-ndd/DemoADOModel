@@ -26,21 +26,9 @@ namespace CRUDNet5
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            // sqlcommand -> insert,delete,...
-            //sqladapter -> select
-            // datatable -> 1 table
-            // dataset -> many table like 1 complete database
-
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
             string sql = "Select * from SubCategory";
             //            string sql = "Select top 10 * from SubCategory";
-            SqlCommand command = new SqlCommand(sql, connection);
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-            dataGridView1.DataSource = dataTable;
-            connection.Close();
+            dataGridView1.DataSource = ExcuteQuery(sql);
         }
 
         private void btbAdd_Click(object sender, EventArgs e)
@@ -62,15 +50,37 @@ namespace CRUDNet5
         {
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
-            string sql = "Select * from SubCategory Where ID like " + textBox1.Text; // 1 or ID like 2
-                                                                                     // string sql = "Select * from SubCategory Where ID like @ID"; way 2 step 1
+
+/*            string sql = "Select * from SubCategory Where ID like " + textBox1.Text; // 1 or ID like 2
+            // string sql = "Select * from SubCategory Where ID like @ID"; way 2 step 1
             SqlCommand command = new SqlCommand(sql, connection);
             // command.Parameters.AddWithValue("@ID", textBox1.Text); way 2 step 2 truyen tham so
+*/
+
+            string querydatetime = "select * from Orders where OrderDate > @OrderDate";
+            SqlCommand command = new SqlCommand(querydatetime, connection);
+            command.Parameters.AddWithValue("@OrderDate",dateTimePicker1.Value);
+
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
             connection.Close();
+        }
+        DataTable ExcuteQuery(string query)
+        {
+            // sqlcommand -> insert,delete,...
+            //sqladapter -> select
+            // datatable -> 1 table
+            // dataset -> many table like 1 complete database
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection); 
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+            connection.Close();
+            return dt;
         }
     }
 }
