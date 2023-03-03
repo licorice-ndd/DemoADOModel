@@ -28,7 +28,7 @@ namespace CRUDNet5.DAO
         public DataTable View()
         {
             object[] parameter = new object[] {};
-            string sql = "Select * from Student";
+            string sql = "Select id as N'Student ID', name as N'Student Name', address as N'Student Address', gender as N'Male or Female', dateofbirth as N'DOB', country as N'Location', role as N'Position' from Student";
             //            string sql = "Select top 10 * from SubCategory";
             return DataProvider.Instance.ExcuteQuery(sql,parameter);
         }
