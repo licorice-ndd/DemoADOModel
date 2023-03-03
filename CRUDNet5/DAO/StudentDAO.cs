@@ -1,4 +1,5 @@
 ﻿using CRUDNet5.Business;
+using CRUDNet5.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -28,7 +29,9 @@ namespace CRUDNet5.DAO
         public DataTable View()
         {
             object[] parameter = new object[] {};
-            string sql = "Select id as N'Student ID', name as N'Student Name', address as N'Student Address', gender as N'Male or Female', dateofbirth as N'DOB', country as N'Location', role as N'Position' from Student";
+            string sql = "Select id as N'Student ID', name as N'Student Name', address as N'Student Address', " +
+                "gender as N'Male or Female', dateofbirth as N'DOB', country as N'Location', role as N'Position' " +
+                "from Student";
             //            string sql = "Select top 10 * from SubCategory";
             return DataProvider.Instance.ExcuteQuery(sql,parameter);
         }
@@ -48,9 +51,14 @@ namespace CRUDNet5.DAO
             }
             return false;
         }
-        public bool FixDataByFields(string id)
+        public bool FixDataByFields(string id, StudentDTO sdto)
         {
-
+            string sql = "Update Student set name = @name, address = @address, gender = @gender, " +
+                "dateofbirth = @dateofbirth, country = @country, role = @role " +
+                "where id = @Oldid";
+            object[] parameter = new object[] {sdto.Id,sdto.Name,sdto.Address,sdto.Gender,sdto.Dateofbirth,sdto.Country,sdto.Role};
+            if(DataProvider.Instance.ExcuteNonQuery(sql,parameter)>0 ) { return true; }
+            return false;
         }
 /*        INSERT INTO[dbo].[Student]
         ([id]

@@ -9,8 +9,8 @@ namespace CRUDNet5.Entity
 {
     class StudentDTO
     {
-        private int id;
-        public int Id
+        private string id;
+        public string Id
         {
             get { return id; }
             set { id = value; } 

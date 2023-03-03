@@ -37,8 +37,15 @@ namespace CRUDNet5
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            comboBox1.DataSource = StudentDAO.Instance.View();
-            comboBox1.DisplayMember = "Student Name";
+/*            comboBox1.DataSource = StudentDAO.Instance.View();
+            comboBox1.DisplayMember = "Student Name";*/
+
+            if (StudentBUS.Instance.Edit(dataGridView1))
+            {
+                MessageBox.Show("success");
+                btnView_Click(sender, e);
+            }
+            else MessageBox.Show("not success");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

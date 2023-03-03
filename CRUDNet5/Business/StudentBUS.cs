@@ -1,4 +1,5 @@
 ﻿using CRUDNet5.DAO;
+using CRUDNet5.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,22 @@ namespace CRUDNet5.Business
         {
             string id = dataGridView.SelectedCells[0].OwningRow.Cells["id"].Value.ToString();
             return StudentDAO.Instance.DeleteFields(id);
+        }
+        public bool Edit(DataGridView data)
+        {
+            DataGridViewRow row = data.SelectedCells[0].OwningRow;
+
+            string OldID = row.Cells["Student ID"].Value.ToString();
+            string id = row.Cells["Student ID"].Value.ToString();
+            string name = row.Cells["Student Name"].Value.ToString();
+            string address = row.Cells["Student Address"].Value.ToString();
+            string gender = row.Cells["Male or Female"].Value.ToString();
+            DateTime dateofbirth = (DateTime)row.Cells["DOB"].Value;
+            string country = row.Cells["Location"].Value.ToString();
+            string role = row.Cells["Position"].Value.ToString();
+
+            StudentDTO sdto = new StudentDTO() { Id = id, Name = name,Address = address,Gender = gender,Dateofbirth = dateofbirth, Country = country, Role = role };
+            return StudentDAO.Instance.FixDataByFields(OldID, sdto);
         }
     }
 }
