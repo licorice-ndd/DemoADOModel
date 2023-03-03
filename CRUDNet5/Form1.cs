@@ -24,15 +24,23 @@ namespace CRUDNet5
 
         }
 
-
-
         private void btnView_Click(object sender, EventArgs e)
         {
-            string sql = "Select * from Customer";
+            // sqlcommand -> insert,delete,...
+            //sqladapter -> select
+            // datatable -> 1 table
+            // dataset -> many table like 1 complete database
+
             SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string sql = "Select * from SubCategory";
+            //            string sql = "Select top 10 * from SubCategory";
             SqlCommand command = new SqlCommand(sql, connection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            connection.Close();
         }
 
         private void btbAdd_Click(object sender, EventArgs e)
@@ -52,7 +60,15 @@ namespace CRUDNet5
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string sql = "Select * from SubCategory Where ID like 1";
+            SqlCommand command = new SqlCommand(sql, connection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            connection.Close();
         }
     }
 }
