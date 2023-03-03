@@ -26,14 +26,15 @@ namespace CRUDNet5
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            string sql = "Select * from SubCategory";
+            string sql = "Select * from Category";
             //            string sql = "Select top 10 * from SubCategory";
             dataGridView1.DataSource = ExcuteQuery(sql);
         }
 
         private void btbAdd_Click(object sender, EventArgs e)
         {
-
+            string sql = "INSERT INTO Category(CategoryName) VALUES(N'CategoryName number 1 or 2')" + textBox1.Text;
+            dataGridView1.DataSource = ExcuteQuery(sql);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -43,7 +44,8 @@ namespace CRUDNet5
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            string sql = "Delete Category where ID like " + textBox1.Text;
+            dataGridView1.DataSource = ExcuteQuery(sql);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
