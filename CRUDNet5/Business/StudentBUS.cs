@@ -42,6 +42,7 @@ namespace CRUDNet5.Business
         {
             DataGridViewRow row = data.SelectedCells[0].OwningRow;
 
+            int newId = Convert.ToInt32(row.Cells["Student ID"].Value);
             string OldID = row.Cells["Student ID"].Value.ToString();
             string id = row.Cells["Student ID"].Value.ToString();
             string name = row.Cells["Student Name"].Value.ToString();

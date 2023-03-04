@@ -59,7 +59,7 @@ namespace CRUDNet5
             return dt;
         }
 
-        public int ExcuteNonQuery(string query, object[] parameter = null) // thuc hien them xoa xua
+        public int ExcuteNonQuery(string query, object[] parameter = null) // thuc hien them xoa sua
         {
             int acceptedRows = 0;
 
