@@ -1,4 +1,4 @@
-namespace Lab1_Automobile
+namespace Lab1_WinForm
 {
     internal static class Program
     {
