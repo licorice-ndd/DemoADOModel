@@ -62,7 +62,7 @@
             dgvCarList.Location = new Point(327, 22);
             dgvCarList.Name = "dgvCarList";
             dgvCarList.RowTemplate.Height = 25;
-            dgvCarList.Size = new Size(453, 418);
+            dgvCarList.Size = new Size(640, 418);
             dgvCarList.TabIndex = 61;
             // 
             // buttonDelete
@@ -179,7 +179,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(989, 450);
             Controls.Add(buttonClose);
             Controls.Add(dgvCarList);
             Controls.Add(buttonDelete);

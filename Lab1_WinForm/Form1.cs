@@ -15,9 +15,9 @@ namespace Lab1_WinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-/*            buttonDelete.Enabled = false;
-            dgvCarList.CellDoubleClick += DgvCarList_CellDoubleClick;*/
-            LoadCarList();
+            buttonDelete.Enabled = false;
+            dgvCarList.CellDoubleClick += DgvCarList_CellDoubleClick;
+            //LoadCarList();
         }
 
         private void DgvCarList_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
@@ -76,8 +76,8 @@ namespace Lab1_WinForm
                 source = new BindingSource();
                 source.DataSource = cars;
 
-                textBoxCarID.DataBindings.Clear(); 
-                textBoxCarName.DataBindings.Clear(); 
+                textBoxCarID.DataBindings.Clear();
+                textBoxCarName.DataBindings.Clear();
                 textBoxManufacturer.DataBindings.Clear();
                 textBoxPrice.DataBindings.Clear();
                 textBoxReleaseYear.DataBindings.Clear();
@@ -86,7 +86,7 @@ namespace Lab1_WinForm
                 textBoxCarName.DataBindings.Add("Text", source, "CarName");
                 textBoxManufacturer.DataBindings.Add("Text", source, "Manufacturer");
                 textBoxPrice.DataBindings.Add("Text", source, "Price");
-                textBoxReleaseYear.DataBindings.Add("Text", source, "Releasevear");
+                textBoxReleaseYear.DataBindings.Add("Text", source, "ReleaseYear");
 
                 dgvCarList.DataSource = null;
                 dgvCarList.DataSource = source;

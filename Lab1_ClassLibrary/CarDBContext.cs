@@ -44,8 +44,14 @@ namespace Lab1_ClassLibrary
         public void AddNew(Car car)
         {
             Car pro = GetCarByID(car.CarID);
-            if (pro != null) CarList.Add(car);
-            else throw new Exception("Car is already exits");
+            if (pro != null)
+            {
+                CarList.Add(car);
+            }
+            else
+            {
+                throw new Exception("Car is already exits");
+            }
         }
         public void Update(Car car)
         {

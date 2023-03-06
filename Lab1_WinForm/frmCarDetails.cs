@@ -50,7 +50,7 @@ namespace Lab1_Win
         private void frmCarDetails_Load(object sender, EventArgs e)
         {
             cboManufacturer.SelectedIndex = 0;
-            txtCarID.Enabled = InsertOrUpdate;
+            txtCarID.Enabled = !InsertOrUpdate;
             if (InsertOrUpdate == true)
             {
                 // update mode
