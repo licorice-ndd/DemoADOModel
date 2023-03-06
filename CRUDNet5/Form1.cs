@@ -37,8 +37,8 @@ namespace CRUDNet5
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-/*            comboBox1.DataSource = StudentDAO.Instance.View();
-            comboBox1.DisplayMember = "Student Name";*/
+            comboBox1.DataSource = StudentDAO.Instance.View();
+            comboBox1.DisplayMember = "id";
 
             if (StudentBUS.Instance.Edit(dataGridView1))
             {
@@ -61,11 +61,12 @@ namespace CRUDNet5
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            // string sql = "Select * from SubCategory Where ID like " + textBox1.Text; // 1 or ID like 2
-            // string sql = "Select * from SubCategory Where ID like @ID"; way 2 step 1
-            // command.Parameters.AddWithValue("@ID", textBox1.Text); way 2 step 2 truyen tham so
+             //string sql = "Select * from SubCategory Where ID like " + textBox1.Text; // 1 or ID like 2
+             //string sql = "Select * from SubCategory Where ID like @ID"; //way 2 step 1
+             //command.Parameters.AddWithValue("@ID", textBox1.Text); //way 2 step 2 truyen tham so
 
             StudentBUS.Instance.SearchByOrderDate(dataGridView1, dateTimePicker1);
         }
+        // select e.name, d.name from employee e, department d where e.department = d.id
     }
 }

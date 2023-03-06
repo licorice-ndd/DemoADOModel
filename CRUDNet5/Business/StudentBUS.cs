@@ -40,19 +40,21 @@ namespace CRUDNet5.Business
         }
         public bool Edit(DataGridView data)
         {
-            DataGridViewRow row = data.SelectedCells[0].OwningRow;
+            DataGridViewRow row = data.SelectedCells.OwningRow;
 
-            int newId = Convert.ToInt32(row.Cells["Student ID"].Value);
+            int newId = Convert.ToInt32(row.Cells["id"].Value);
+
             string OldID = row.Cells["Student ID"].Value.ToString();
-            string id = row.Cells["Student ID"].Value.ToString();
-            string name = row.Cells["Student Name"].Value.ToString();
-            string address = row.Cells["Student Address"].Value.ToString();
-            string gender = row.Cells["Male or Female"].Value.ToString();
-            DateTime dateofbirth = (DateTime)row.Cells["DOB"].Value;
-            string country = row.Cells["Location"].Value.ToString();
-            string role = row.Cells["Position"].Value.ToString();
+            string Id = row.Cells["Student ID"].Value.ToString();
 
-            StudentDTO sdto = new StudentDTO() { Id = id, Name = name,Address = address,Gender = gender,Dateofbirth = dateofbirth, Country = country, Role = role };
+            string Name = row.Cells["Student Name"].Value.ToString();
+            string Address = row.Cells["Student Address"].Value.ToString();
+            string Gender = row.Cells["Male or Female"].Value.ToString();
+            DateTime Dateofbirth = (DateTime)row.Cells["DOB"].Value;
+            string Country = row.Cells["Location"].Value.ToString();
+            string Role = row.Cells["Position"].Value.ToString();
+
+            StudentDTO sdto = new StudentDTO() { Id = Id, Name = Name,Address = Address,Gender = Gender,Dateofbirth = Dateofbirth, Country = Country, Role = Role };
             return StudentDAO.Instance.FixDataByFields(OldID, sdto);
         }
     }

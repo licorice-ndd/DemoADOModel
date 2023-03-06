@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CRUDNet5.DAO
 {
@@ -40,6 +41,10 @@ namespace CRUDNet5.DAO
             object[] parameter = new object[] { datetimepicker.Value };
             string sql = "select * from Student where dateofbirth > @dateofbirth";
             return DataProvider.Instance.ExcuteQuery(sql, parameter);
+
+            /*            object[] para = new object[] {};
+                        string sql = "select * from Student where id like @ID";
+                        return DataProvider.Instance.ExcuteQuery(sql, textBox1.Text);*/
         }
         public bool DeleteFields(string id)
         {
