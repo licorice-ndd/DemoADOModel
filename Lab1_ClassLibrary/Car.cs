@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1_Automobile.BusinessObject
+namespace Lab1_ClassLibrary
 {
-    class Car
+    public class Car
     {
         public int CarID { get; set; }
         public string CarName { get; set; }
-        public string Manufacturer {  get; set; }
+        public string Manufacturer { get; set; }
         public decimal Price { get; set; }
-        public int ReleaseYear { get; set; }    
+        public int ReleaseYear { get; set; }
     }
 }

@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecondWebAppNet5", "SecondW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRUDNet5", "CRUDNet5\CRUDNet5.csproj", "{9D6CA650-7533-4716-9CBF-1A7DD0DF742A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PE4", "PE4\PE4.csproj", "{04B8AACB-7B23-41FF-B66D-D96808B6A9C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PE4", "PE4\PE4.csproj", "{04B8AACB-7B23-41FF-B66D-D96808B6A9C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1_Automobile", "Lab1_Automobile\Lab1_Automobile.csproj", "{ABD2E7E6-0B5F-4F9C-8ECF-398314F3163E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1_ClassLibrary", "Lab1_ClassLibrary\Lab1_ClassLibrary.csproj", "{6888A8BC-DB8A-416F-AD9C-C9EBD405DB34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{04B8AACB-7B23-41FF-B66D-D96808B6A9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04B8AACB-7B23-41FF-B66D-D96808B6A9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04B8AACB-7B23-41FF-B66D-D96808B6A9C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD2E7E6-0B5F-4F9C-8ECF-398314F3163E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD2E7E6-0B5F-4F9C-8ECF-398314F3163E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD2E7E6-0B5F-4F9C-8ECF-398314F3163E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD2E7E6-0B5F-4F9C-8ECF-398314F3163E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6888A8BC-DB8A-416F-AD9C-C9EBD405DB34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6888A8BC-DB8A-416F-AD9C-C9EBD405DB34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6888A8BC-DB8A-416F-AD9C-C9EBD405DB34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6888A8BC-DB8A-416F-AD9C-C9EBD405DB34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
