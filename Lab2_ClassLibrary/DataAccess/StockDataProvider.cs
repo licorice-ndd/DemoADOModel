@@ -19,7 +19,8 @@ namespace Lab2_ClassLibrary.DataAccess
         {
             return new SqlParameter { DbType = dbType, ParameterName = name, Size = size, Value = value, Direction = direction };
         }
-        public IDataReader GetDataReader(string commandText, CommandType commandType, out SqlConnection connection, params SqlParameter[] parameters)
+        public IDataReader GetDataReader(string commandText, CommandType commandType, 
+            out SqlConnection connection, params SqlParameter[] parameters)
         {
             IDataReader reader = null;
             try
@@ -41,7 +42,8 @@ namespace Lab2_ClassLibrary.DataAccess
             }
             return reader;
         }
-        public void Delete(string commandText, CommandType commandType, params SqlParameter[] parameters)
+        public void Delete(string commandText, CommandType commandType, 
+            params SqlParameter[] parameters)
         {
             try
             {
@@ -49,6 +51,7 @@ namespace Lab2_ClassLibrary.DataAccess
                 connection.Open();
                 using var command = new SqlCommand(commandText,connection);
                 command.CommandType = commandType;
+
                 if(parameters != null)
                 {
                     foreach(var parameter in parameters)
@@ -60,10 +63,57 @@ namespace Lab2_ClassLibrary.DataAccess
             }
             catch(Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Data Provider : Delete Method",ex.InnerException);
+            }
+        }
+        public void Insert(string commandText, CommandType commandType, 
+            params SqlParameter[] parameters)
+        {
+            try
+            {
+                using var connection = new SqlConnection(ConnectionString);
+                connection.Open();
+                using var command = new SqlCommand(commandText, connection);
+                command.CommandType = commandType;
+
+                if (parameters != null)
+                {
+                    foreach (var parameter in parameters)
+                    {
+                        command.Parameters.Add(parameter);
+                    }
+                }
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Data Provider : Delete Method", ex.InnerException);
+            }
+        }
+        public void Update(string commandText, CommandType commandType,
+            params SqlParameter[] parameters)
+        {
+            try
+            {
+                using var connection = new SqlConnection(ConnectionString);
+                connection.Open();
+                using var command = new SqlCommand(commandText, connection);
+                command.CommandType = commandType;
+
+                if (parameters != null)
+                {
+                    foreach (var parameter in parameters)
+                    {
+                        command.Parameters.Add(parameter);
+                    }
+                }
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Data Provider : Delete Method", ex.InnerException);
             }
         }
     }
 }
-connection.Open();
-using var command = new SqlCommand(commandText, connection);
+
