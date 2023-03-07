@@ -51,11 +51,11 @@ namespace Lab2_ClassLibrary.DataAccess
             {
                 throw new Exception(ex.Message);
             }
-/*            finally
+            finally
             {
                 dataReader.Close();
                 CloseConnection();
-            }*/
+            }
             return cars;
         }
         public Car GetCarByID(int carID)
@@ -83,11 +83,11 @@ namespace Lab2_ClassLibrary.DataAccess
             {
                 throw new Exception(ex.Message);
             }
-/*            finally
+            finally
             {
                 dataReader.Close();
                 CloseConnection();
-            }*/
+            }
             return car;
         }
         public void AddNew(Car car)
@@ -111,10 +111,10 @@ namespace Lab2_ClassLibrary.DataAccess
                 throw new Exception("The car is already exist");
                 Console.WriteLine("check bug");
             }
-/*            finally 
+            finally
             {
                 CloseConnection();
-            }*/
+            }
         }
 
         public void Update(Car car)
@@ -138,10 +138,10 @@ namespace Lab2_ClassLibrary.DataAccess
             {
                 throw new Exception("The car doesnt already exist");
             }
-            /*            finally 
-                        {
-                            CloseConnection();
-                        }*/
+            finally
+            {
+                CloseConnection();
+            }
         }
         public void Remove(int carID)
         {
@@ -160,6 +160,10 @@ namespace Lab2_ClassLibrary.DataAccess
                 }
             }catch(Exception ex) 
             { throw new Exception(ex.Message); }
+            finally
+            {
+                CloseConnection();
+            }
         }
 
     }

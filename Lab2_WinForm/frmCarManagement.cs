@@ -1,28 +1,35 @@
-using Lab1_ClassLibrary;
-using Lab1_Win;
+﻿using Lab2_ClassLibrary.BusinessObjet;
+using Lab2_ClassLibrary.Repository;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Lab1_WinForm
+namespace Lab2_WinForm
 {
-    public partial class Form1 : Form
+    public partial class frmCarManagement : Form
     {
         ICarRepository carRepository = new CarRepository();
         // create a data source
         BindingSource source;
-        public Form1()
+        public frmCarManagement()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmCarManagement_Load(object sender, EventArgs e)
         {
             buttonDelete.Enabled = false;
             dgvCarList.CellDoubleClick += DgvCarList_CellDoubleClick;
-            //LoadCarList();
         }
-
         private void DgvCarList_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
         {
-            frmCarDetails frmCarDetails = new frmCarDetails
+            Form1 frmCarDetails = new Form1
             {
                 Text = "Update car",
                 InsertOrUpdate = true,
@@ -65,7 +72,6 @@ namespace Lab1_WinForm
             }
             return car;
         }
-
         public void LoadCarList()
         {
             var cars = carRepository.GetCars();
@@ -114,7 +120,7 @@ namespace Lab1_WinForm
 
         private void buttonNew_Click(object sender, EventArgs e)
         {
-            frmCarDetails frmCarDetails = new frmCarDetails
+            Form1 frmCarDetails = new Form1
             {
                 Text = "Add a car",
                 InsertOrUpdate = false,
@@ -145,11 +151,6 @@ namespace Lab1_WinForm
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void dgvCarList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
