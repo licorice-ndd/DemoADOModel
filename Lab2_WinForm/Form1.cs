@@ -41,7 +41,10 @@ namespace Lab2_WinForm
                     Price = decimal.Parse(txtPrice.Text),
                     ReleaseYear = int.Parse(txtReleaseYear.Text)
                 };
-                if (InsertOrUpdate == false) { CarRepository.InsertCar(car); }
+                if (InsertOrUpdate == false) 
+                { 
+                    CarRepository.InsertCar(car); 
+                }
                 else { CarRepository.UpdateCar(car); }
             }
             catch (Exception ex)

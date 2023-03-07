@@ -109,7 +109,6 @@ namespace Lab2_ClassLibrary.DataAccess
             }catch (Exception ex)
             {
                 throw new Exception("The car is already exist");
-                Console.WriteLine("check bug");
             }
             finally
             {
