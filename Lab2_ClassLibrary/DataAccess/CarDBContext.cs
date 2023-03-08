@@ -95,7 +95,7 @@ namespace Lab2_ClassLibrary.DataAccess
             try
             {
                 Car pro = GetCarByID(car.CarID);
-                if (pro != null)
+                if (pro == null)
                 {
                     string sql = "Insert Car values(@CarID,@CarName,@Manufacturer,@Price,@ReleasedYear)";
                     var parameters = new List<SqlParameter>();

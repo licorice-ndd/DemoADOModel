@@ -42,10 +42,12 @@ namespace Lab2_WinForm
                     ReleaseYear = int.Parse(txtReleaseYear.Text)
                 };
                 if (InsertOrUpdate == false) 
-                { 
+                {
+                    Console.WriteLine(car);
                     CarRepository.InsertCar(car); 
                 }
-                else { CarRepository.UpdateCar(car); }
+                else {
+                    Console.WriteLine(car); CarRepository.UpdateCar(car); }
             }
             catch (Exception ex)
             {
