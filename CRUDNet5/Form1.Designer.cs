@@ -37,13 +37,14 @@
             btnDelete = new System.Windows.Forms.Button();
             dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             comboBox1 = new System.Windows.Forms.ComboBox();
+            buttonClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new System.Drawing.Point(-9, 25);
+            dataGridView1.Location = new System.Drawing.Point(6, 25);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new System.Drawing.Size(908, 456);
@@ -121,11 +122,22 @@
             comboBox1.Size = new System.Drawing.Size(200, 23);
             comboBox1.TabIndex = 9;
             // 
+            // buttonClose
+            // 
+            buttonClose.Location = new System.Drawing.Point(951, 336);
+            buttonClose.Name = "buttonClose";
+            buttonClose.Size = new System.Drawing.Size(75, 23);
+            buttonClose.TabIndex = 10;
+            buttonClose.Text = "Close";
+            buttonClose.UseVisualStyleBackColor = true;
+            buttonClose.Click += buttonClose_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1153, 493);
+            Controls.Add(buttonClose);
             Controls.Add(comboBox1);
             Controls.Add(dateTimePicker1);
             Controls.Add(btnDelete);
@@ -154,5 +166,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonClose;
     }
 }

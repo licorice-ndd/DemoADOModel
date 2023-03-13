@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Lab2_ClassLibrary.BusinessObjet;
+
 namespace Lab2_ClassLibrary.Repository
 {
     public interface ICarRepository

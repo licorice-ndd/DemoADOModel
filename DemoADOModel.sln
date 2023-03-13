@@ -19,9 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2_ClassLibrary", "Lab2_C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2_WinForm", "Lab2_WinForm\Lab2_WinForm.csproj", "{63DF85AD-E0F8-44D3-A6A6-654BF9761519}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3_ClassLibrary", "Lab3_ClassLibrary\Lab3_ClassLibrary.csproj", "{2E9955D5-814F-4FF1-9CB1-E7182F8D0295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab3_ClassLibrary", "Lab3_ClassLibrary\Lab3_ClassLibrary.csproj", "{2E9955D5-814F-4FF1-9CB1-E7182F8D0295}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3_EntityFramworkCore", "Lab3_EntityFramworkCore\Lab3_EntityFramworkCore.csproj", "{54807658-F00E-44BF-A243-B4F7CCB7A43F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab3_EntityFramworkCore", "Lab3_EntityFramworkCore\Lab3_EntityFramworkCore.csproj", "{54807658-F00E-44BF-A243-B4F7CCB7A43F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PE_SU22_Q1", "PE_SU22_Q1\PE_SU22_Q1.csproj", "{74367686-E866-4C64-B836-8C4D414C43BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdWebAppNet6", "ThirdWebAppNet6\ThirdWebAppNet6.csproj", "{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{54807658-F00E-44BF-A243-B4F7CCB7A43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54807658-F00E-44BF-A243-B4F7CCB7A43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54807658-F00E-44BF-A243-B4F7CCB7A43F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74367686-E866-4C64-B836-8C4D414C43BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74367686-E866-4C64-B836-8C4D414C43BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74367686-E866-4C64-B836-8C4D414C43BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74367686-E866-4C64-B836-8C4D414C43BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

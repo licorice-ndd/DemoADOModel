@@ -40,12 +40,12 @@ namespace CRUDNet5.Business
         }
         public bool Edit(DataGridView data)
         {
-            DataGridViewRow row = data.SelectedCells.OwningRow;
+            DataGridViewRow row = data.SelectedCells[0].OwningRow;
 
-            int newId = Convert.ToInt32(row.Cells["id"].Value);
+            //int newId = Convert.ToInt32(row.Cells["id"].Value);
 
-            string OldID = row.Cells["Student ID"].Value.ToString();
-            string Id = row.Cells["Student ID"].Value.ToString();
+            string OldID = row.Cells["ID"].Value.ToString();
+            string Id = row.Cells["ID"].Value.ToString();
 
             string Name = row.Cells["Student Name"].Value.ToString();
             string Address = row.Cells["Student Address"].Value.ToString();

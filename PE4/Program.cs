@@ -12,6 +12,29 @@ namespace PE4
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
         }
+
+
+        class Sample
+        {
+            static Sample()
+            {
+                Console.WriteLine("1");
+            }
+            public Sample()
+            {
+                Console.WriteLine("2");
+            }
+            static void Main(string[] args) 
+            {
+                Sample obj = new Sample();  
+                Console.WriteLine();
+            }
+        }
+
+
+
+
     }
 }
