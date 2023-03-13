@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab3_EntityFramworkCore", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PE_SU22_Q1", "PE_SU22_Q1\PE_SU22_Q1.csproj", "{74367686-E866-4C64-B836-8C4D414C43BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdWebAppNet6", "ThirdWebAppNet6\ThirdWebAppNet6.csproj", "{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThirdWebAppNet6", "ThirdWebAppNet6\ThirdWebAppNet6.csproj", "{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PE_PRN211_FA22_Q1", "PE_PRN211_FA22_Q1\PE_PRN211_FA22_Q1.csproj", "{EB0AC39E-0A40-4044-BD08-0530EBD9A3A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE67A700-5F94-4F86-8303-0E3A6FC33CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0AC39E-0A40-4044-BD08-0530EBD9A3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0AC39E-0A40-4044-BD08-0530EBD9A3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0AC39E-0A40-4044-BD08-0530EBD9A3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0AC39E-0A40-4044-BD08-0530EBD9A3A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
