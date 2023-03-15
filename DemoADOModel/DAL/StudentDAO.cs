@@ -42,6 +42,7 @@ namespace DemoADOModel.DAL
             DataTable dt = DAO.GetDataBySql(sql, parameter1,parameter2);
             if (dt.Rows.Count == 0) return null;
             DataRow dr = dt.Rows[0];
+
             return new Student(
                     Convert.ToInt32(dr["StudentId"]),
                     dr["RollNumber"].ToString(),
@@ -50,5 +51,6 @@ namespace DemoADOModel.DAL
                     dr["MidName"].ToString()
                     );
         }
+        string sql = "insert from student value(name = @name, ... where id = @id)";
     }
 }
