@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PE_PRN211_FA22_Q2", "PE_PRN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SU22_Q2", "SU22_Q2\SU22_Q2.csproj", "{2F68FA80-E49C-4D3A-91B0-8F7259BC93D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PE_Sample_SP22_Q1", "PE_Sample_SP22_Q1\PE_Sample_SP22_Q1.csproj", "{318458A5-B579-4E6A-9E33-81D233E0BED9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{2F68FA80-E49C-4D3A-91B0-8F7259BC93D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F68FA80-E49C-4D3A-91B0-8F7259BC93D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F68FA80-E49C-4D3A-91B0-8F7259BC93D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{318458A5-B579-4E6A-9E33-81D233E0BED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{318458A5-B579-4E6A-9E33-81D233E0BED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{318458A5-B579-4E6A-9E33-81D233E0BED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{318458A5-B579-4E6A-9E33-81D233E0BED9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
